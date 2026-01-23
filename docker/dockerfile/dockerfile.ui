@@ -1,0 +1,34 @@
+# Dockerfile cho UI service - Hệ thống nhận dạng ngôn ngữ ký hiệu
+FROM python:3.10-slim
+
+# Thiết lập working directory
+WORKDIR /app
+
+
+# Copy pyproject.toml và requirements files
+COPY pyproject.toml ./
+COPY ui/requirements.txt ./ui/
+
+# Cài đặt Python dependencies
+# Sử dụng pip để cài từ pyproject.toml với optional dependencies ui
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
+    pip install --no-cache-dir -e ".[ui]" && \
+    pip install --no-cache-dir requests
+
+# Copy toàn bộ source code
+COPY . .
+
+# Expose port cho Gradio
+EXPOSE 7860
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1
+ENV GRADIO_SERVER_NAME=0.0.0.0
+ENV GRADIO_SERVER_PORT=7860
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD python -c "import requests; requests.get('http://localhost:7860')" || exit 1
+
+# Chạy ứng dụng
+CMD ["python", "-m", "ui.app"]

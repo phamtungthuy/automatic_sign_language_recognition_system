@@ -1,0 +1,25 @@
+[project]
+name = "INT6146_10"
+version = "0.0.1"
+description = "Automatic Sign Language Recognition System"
+dependencies = [
+
+]
+
+[project.optional-dependencies]
+ui = [
+    "gradio>=4.0.0",
+    "opencv-python>=4.8.0",
+    "numpy>=1.24.0",
+    "Pillow>=10.0.0"
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["ai", "api", "ui", "svr", "utils", "provider", "configs"]
+
+[tool.setuptools.package-data]
+"*" = ["*.json", "*.yaml", "*.yml", "*.txt"]
