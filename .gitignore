@@ -148,3 +148,4 @@ docker_volumes/
 test_something/
 
 .vscode
+dataset

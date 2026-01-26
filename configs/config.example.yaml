@@ -1,0 +1,121 @@
+proxy:
+
+admin:
+  email: <your-admin-email>
+  nickname: <your-admin-nickname>
+  password: <your-admin-password>
+
+database:
+  url: <your-database-url>
+
+secret_key: <your-secret-key>
+server_url: <your-server-url>
+
+summarization_model: <your-summarization-model>
+vision_model: <your-vision-model>
+
+llm_config:
+  stream_log: false
+  think_log: false
+  
+ocr_config:
+  image_dpi: 192
+  min_pdf_image_dim: 1024
+  max_batch_size: 20
+
+cors:
+  origins:
+    - "*"
+
+retrieval:
+  type: milvus
+  host: <your-retrieval-host>
+  port: <your-retrieval-port>
+  username: <your-retrieval-username>
+  password: <your-retrieval-password>
+
+messaging:
+  type: redis
+  host: <your-messaging-host>
+  port: <your-messaging-port>
+  db: <your-messaging-db>
+  password: <your-messaging-password>
+
+storage:
+  expires_seconds: 604800
+  type: minio
+  endpoint: <your-storage-endpoint>  # Internal endpoint (e.g., http://minio:9000 for Docker)
+  port: <your-storage-port>
+  access_key: <your-storage-access-key>
+  secret_key: <your-storage-secret-key>
+  use_ssl: <your-storage-use-ssl>
+
+ocrs:
+  "5CD-AI/Vintern-3B-R-beta":
+    api_type: "openai"
+    provider_name: "vintern"
+    api_key: <your-api-key>
+    base_url: <your-base-url>
+    temperature: <your-temperature>
+
+  "5CD-AI/Vintern-1B-v3_5":
+    api_type: "openai"
+    provider_name: "vintern"
+    api_key: <your-api-key>
+    base_url: <your-base-url>
+    temperature: <your-temperature>
+
+  "deepseek-ai/DeepSeek-OCR":
+    api_type: "openai"
+    provider_name: "deepseek"
+    api_key: <your-api-key>
+    base_url: <your-base-url>
+    temperature: <your-temperature>
+  
+  "rednote-hilab/dots.ocr":
+    api_type: "openai"
+    provider_name: "dots"
+    api_key: <your-api-key>
+    base_url: <your-base-url>
+    temperature: <your-temperature>
+
+  "datalab-to/chandra":
+    api_type: "openai"
+    api_key: <your-api-key>
+    base_url: <your-base-url>
+    temperature: <your-temperature>
+    
+  "fitz":
+    api_type: "fitz"
+    provider_name: "fitz"
+
+  "tesseract":
+    api_type: "tesseract"
+    provider_name: "tesseract"
+  
+
+embedding:
+  api_type: "openai"
+  base_url: "https://api.openai.com/v1"
+  api_key: <your-api-key>
+  model: "text-embedding-3-small"
+
+llm:
+  api_type: "openai"  # or azure / ollama / groq etc.
+  base_url: "https://api.openai.com/v1"
+  api_key: <your-api-key>
+  model: <your-model>
+  temperature: 0
+
+models:
+  "<your-model>":
+    api_type: "openai"
+    base_url: "https://api.openai.com/v1"
+    api_key: <your-api-key>
+    temperature: 0
+  
+embeddings:
+  "your-embedding-model":
+    api_type: "openai"
+    base_url: "https://api.openai.com/v1"
+    api_key: <your-api-key>
