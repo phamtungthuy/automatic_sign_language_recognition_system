@@ -149,3 +149,5 @@ test_something/
 
 .vscode
 dataset
+models/*
+output

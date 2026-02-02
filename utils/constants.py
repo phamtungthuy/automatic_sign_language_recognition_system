@@ -70,6 +70,12 @@ DATABASE_URL = config.get("database").get("url")
 
 SEGMENTATION_FOLDER_PATH = ROOT_PATH / "models" / "segmentation"
 
+# Sign Language Recognition
+SLR_MODEL_PATH = ROOT_PATH / "models" / "slr" / "best_model.pth"
+SLR_LABEL_MAPPING_PATH = ROOT_PATH / "models" / "slr" / "label_mapping.pkl"
+SLR_NUM_CLASSES = 100
+SLR_TARGET_FRAMES = 16
+
 PAGES_PER_TASK = config.get("pages_per_task", 20)
 
 SUMMARIZATION_MODEL = config.get("summarization_model")

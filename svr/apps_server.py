@@ -1,7 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.exceptions import RequestValidationError
 from contextlib import asynccontextmanager
-from db.database import DBSessionMiddleware
 from starlette.middleware.cors import CORSMiddleware
 
 from utils.logs import logger
@@ -39,7 +38,6 @@ def get_application() -> FastAPI:
         allow_methods=["*"],
         allow_headers=["*"],
     )
-    application.add_middleware(DBSessionMiddleware, db_url=DATABASE_URL)
 
 
     application.add_exception_handler(CustomException, custom_exception_handler)  # type: ignore

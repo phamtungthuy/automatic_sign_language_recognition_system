@@ -1,0 +1,28 @@
+# Core dependencies for Sign Language Recognition API
+
+# Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Computer Vision
+opencv-python>=4.8.0
+
+# Scientific Computing
+numpy>=1.24.0
+
+# Web API
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
+
+# UI
+gradio>=4.0.0
+
+# HTTP Client
+requests>=2.31.0
+
+# Progress Bars
+tqdm>=4.65.0
+
+# ML Metrics (optional, for training)
+scikit-learn>=1.3.0
