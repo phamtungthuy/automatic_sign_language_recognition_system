@@ -4,7 +4,7 @@ Configuration constants cho UI
 import os
 
 # ============== API CONFIGURATION ==============
-API_BASE_URL = os.getenv("SLR_API_URL", "http://localhost:8000")
+API_BASE_URL = os.getenv("SLR_API_URL", "https://slr1.iselab.info")
 API_PREDICT_URL = f"{API_BASE_URL}/api/v1/slr/predict"
 API_PREDICT_TOPK_URL = f"{API_BASE_URL}/api/v1/slr/predict/topk"
 API_PREDICT_CONTINUOUS_URL = f"{API_BASE_URL}/api/v1/slr/predict/continuous"
