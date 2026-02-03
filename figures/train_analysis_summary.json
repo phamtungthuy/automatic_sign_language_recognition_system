@@ -1,0 +1,439 @@
+{
+  "dataset_info": {
+    "total_videos": 3875,
+    "total_classes": 100,
+    "train_ratio": 0.8,
+    "random_seed": 42
+  },
+  "train_split": {
+    "num_videos": 3100,
+    "num_classes": 100,
+    "videos_per_class": {
+      "min": 3,
+      "max": 61,
+      "mean": 31.0,
+      "std": 18.128982321134302
+    },
+    "frame_statistics": {
+      "min": 16,
+      "max": 30,
+      "mean": 29.893870967741936,
+      "median": 30.0,
+      "std": 1.1648180736239455,
+      "q1": 30.0,
+      "q3": 30.0
+    }
+  },
+  "val_split": {
+    "num_videos": 0,
+    "num_classes": 90,
+    "frame_statistics": {
+      "min": 0,
+      "max": 0,
+      "mean": 0,
+      "median": 0
+    }
+  },
+  "class_distribution": {
+    "An ủi": {
+      "train": 26,
+      "val": 6
+    },
+    "Ban ngày": {
+      "train": 17,
+      "val": 6
+    },
+    "Ban đêm": {
+      "train": 7,
+      "val": 0
+    },
+    "Biết": {
+      "train": 55,
+      "val": 12
+    },
+    "Biếu tặng": {
+      "train": 43,
+      "val": 8
+    },
+    "Bàn tay": {
+      "train": 6,
+      "val": 2
+    },
+    "Băn khoăn": {
+      "train": 50,
+      "val": 12
+    },
+    "Bạn thân": {
+      "train": 15,
+      "val": 3
+    },
+    "Bế mạc": {
+      "train": 31,
+      "val": 4
+    },
+    "Bệnh nhân": {
+      "train": 6,
+      "val": 0
+    },
+    "Bệnh viện": {
+      "train": 43,
+      "val": 5
+    },
+    "Bộ y tế": {
+      "train": 16,
+      "val": 1
+    },
+    "Chiều": {
+      "train": 47,
+      "val": 13
+    },
+    "Cho": {
+      "train": 43,
+      "val": 6
+    },
+    "Chào": {
+      "train": 25,
+      "val": 9
+    },
+    "Chân": {
+      "train": 52,
+      "val": 10
+    },
+    "Chúng ta": {
+      "train": 12,
+      "val": 2
+    },
+    "Chạy": {
+      "train": 48,
+      "val": 19
+    },
+    "Chấp nhận": {
+      "train": 6,
+      "val": 1
+    },
+    "Chậm lại": {
+      "train": 56,
+      "val": 13
+    },
+    "Con gấu": {
+      "train": 45,
+      "val": 12
+    },
+    "Cá": {
+      "train": 47,
+      "val": 11
+    },
+    "Cách ly": {
+      "train": 3,
+      "val": 3
+    },
+    "Cám dỗ": {
+      "train": 55,
+      "val": 13
+    },
+    "Có thể": {
+      "train": 22,
+      "val": 0
+    },
+    "Cơ thể": {
+      "train": 6,
+      "val": 0
+    },
+    "Cảm ơn": {
+      "train": 44,
+      "val": 18
+    },
+    "Cần": {
+      "train": 3,
+      "val": 4
+    },
+    "Cứu": {
+      "train": 43,
+      "val": 10
+    },
+    "Dạy dỗ": {
+      "train": 35,
+      "val": 7
+    },
+    "Dễ": {
+      "train": 31,
+      "val": 20
+    },
+    "Ghét": {
+      "train": 27,
+      "val": 5
+    },
+    "Giúp": {
+      "train": 35,
+      "val": 10
+    },
+    "Ho": {
+      "train": 6,
+      "val": 0
+    },
+    "Hy sinh": {
+      "train": 39,
+      "val": 8
+    },
+    "Hâm mộ": {
+      "train": 44,
+      "val": 6
+    },
+    "Hôm nay": {
+      "train": 20,
+      "val": 6
+    },
+    "Họ": {
+      "train": 41,
+      "val": 7
+    },
+    "Học sinh": {
+      "train": 7,
+      "val": 0
+    },
+    "Khai báo": {
+      "train": 45,
+      "val": 11
+    },
+    "Khu cách ly": {
+      "train": 8,
+      "val": 3
+    },
+    "Khóc": {
+      "train": 52,
+      "val": 15
+    },
+    "Khẩu trang": {
+      "train": 8,
+      "val": 3
+    },
+    "Kết hôn": {
+      "train": 25,
+      "val": 6
+    },
+    "Lo lắng": {
+      "train": 7,
+      "val": 0
+    },
+    "Lây bệnh": {
+      "train": 39,
+      "val": 11
+    },
+    "Mua": {
+      "train": 21,
+      "val": 14
+    },
+    "Mời vào": {
+      "train": 47,
+      "val": 9
+    },
+    "Nghe": {
+      "train": 51,
+      "val": 17
+    },
+    "Nghỉ ngơi": {
+      "train": 57,
+      "val": 10
+    },
+    "Ngón tay": {
+      "train": 5,
+      "val": 2
+    },
+    "Nhà": {
+      "train": 61,
+      "val": 10
+    },
+    "Nhìn": {
+      "train": 53,
+      "val": 7
+    },
+    "Nhầm": {
+      "train": 6,
+      "val": 1
+    },
+    "Nhớ": {
+      "train": 42,
+      "val": 15
+    },
+    "Nói": {
+      "train": 28,
+      "val": 2
+    },
+    "Nói xấu": {
+      "train": 59,
+      "val": 9
+    },
+    "Nôn ói": {
+      "train": 34,
+      "val": 10
+    },
+    "Nặng": {
+      "train": 38,
+      "val": 10
+    },
+    "Phía sau": {
+      "train": 55,
+      "val": 12
+    },
+    "Phạt": {
+      "train": 33,
+      "val": 4
+    },
+    "Phỏng vấn": {
+      "train": 39,
+      "val": 6
+    },
+    "Phục hồi": {
+      "train": 4,
+      "val": 2
+    },
+    "Rau": {
+      "train": 58,
+      "val": 14
+    },
+    "Rẽ phải": {
+      "train": 11,
+      "val": 4
+    },
+    "Rẽ trái": {
+      "train": 50,
+      "val": 15
+    },
+    "San sẻ": {
+      "train": 39,
+      "val": 7
+    },
+    "Sốt": {
+      "train": 5,
+      "val": 1
+    },
+    "Sử dụng": {
+      "train": 50,
+      "val": 9
+    },
+    "Thích": {
+      "train": 8,
+      "val": 3
+    },
+    "Thăm": {
+      "train": 18,
+      "val": 1
+    },
+    "Thương": {
+      "train": 3,
+      "val": 5
+    },
+    "Thất lạc": {
+      "train": 20,
+      "val": 4
+    },
+    "Thức dậy": {
+      "train": 50,
+      "val": 17
+    },
+    "Thức ăn": {
+      "train": 44,
+      "val": 12
+    },
+    "Trưa": {
+      "train": 44,
+      "val": 13
+    },
+    "Trường học": {
+      "train": 55,
+      "val": 19
+    },
+    "Tôi": {
+      "train": 43,
+      "val": 9
+    },
+    "Tập luyện": {
+      "train": 7,
+      "val": 4
+    },
+    "Tối": {
+      "train": 18,
+      "val": 6
+    },
+    "Uống": {
+      "train": 17,
+      "val": 8
+    },
+    "Virus": {
+      "train": 7,
+      "val": 0
+    },
+    "Vâng lời": {
+      "train": 6,
+      "val": 2
+    },
+    "Xa": {
+      "train": 46,
+      "val": 16
+    },
+    "Xe máy": {
+      "train": 6,
+      "val": 0
+    },
+    "Xe đạp": {
+      "train": 14,
+      "val": 2
+    },
+    "Xin lỗi": {
+      "train": 15,
+      "val": 4
+    },
+    "Xin phép": {
+      "train": 31,
+      "val": 7
+    },
+    "Xuất viện": {
+      "train": 32,
+      "val": 16
+    },
+    "Xúc động": {
+      "train": 51,
+      "val": 8
+    },
+    "Áp dụng": {
+      "train": 56,
+      "val": 15
+    },
+    "Ô tô": {
+      "train": 37,
+      "val": 10
+    },
+    "Ăn": {
+      "train": 49,
+      "val": 11
+    },
+    "Ăn mừng": {
+      "train": 49,
+      "val": 13
+    },
+    "Đi": {
+      "train": 44,
+      "val": 18
+    },
+    "Đâu": {
+      "train": 42,
+      "val": 11
+    },
+    "Đầu": {
+      "train": 35,
+      "val": 19
+    },
+    "Đẹp": {
+      "train": 16,
+      "val": 2
+    },
+    "Đồng ý": {
+      "train": 44,
+      "val": 9
+    },
+    "Ủng hộ": {
+      "train": 6,
+      "val": 0
+    }
+  }
+}

@@ -1,0 +1,538 @@
+{
+  "summary": {
+    "total_videos": 3875,
+    "clean_videos": 3117,
+    "glitchy_videos": 758,
+    "clean_percent": 80.43870967741935,
+    "glitchy_percent": 19.561290322580646
+  },
+  "glitch_types": {
+    "Solid Color": 3959,
+    "Solid Red": 1101,
+    "Solid Green": 982,
+    "Solid Black": 922,
+    "Solid White": 853,
+    "Solid Yellow": 798,
+    "Solid Blue": 719
+  },
+  "severity_stats": {
+    "mean_bad_percent": 41.20052770448549,
+    "max_bad_percent": 100.0,
+    "videos_over_50_percent": 298
+  },
+  "glitchy_video_list": [
+    {
+      "path": "dataset\\dataset\\train\\Biết\\214576.mp4",
+      "label": "Biết",
+      "bad_percent": 100.0,
+      "bad_frames": 16,
+      "total_frames": 16,
+      "glitch_types": {
+        "Solid Green": 16
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Khai báo\\885339.mp4",
+      "label": "Khai báo",
+      "bad_percent": 100.0,
+      "bad_frames": 23,
+      "total_frames": 23,
+      "glitch_types": {
+        "Solid Color": 23
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Khai báo\\885339_1.mp4",
+      "label": "Khai báo",
+      "bad_percent": 100.0,
+      "bad_frames": 23,
+      "total_frames": 23,
+      "glitch_types": {
+        "Solid Color": 23
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Khai báo\\885339_2.mp4",
+      "label": "Khai báo",
+      "bad_percent": 100.0,
+      "bad_frames": 23,
+      "total_frames": 23,
+      "glitch_types": {
+        "Solid Color": 23
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Nôn ói\\915809.mp4",
+      "label": "Nôn ói",
+      "bad_percent": 70.0,
+      "bad_frames": 21,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Color": 21
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Thất lạc\\708519.mp4",
+      "label": "Thất lạc",
+      "bad_percent": 70.0,
+      "bad_frames": 21,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Green": 21
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\An ủi\\133326.mp4",
+      "label": "An ủi",
+      "bad_percent": 66.66666666666666,
+      "bad_frames": 20,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Color": 20
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\An ủi\\133326_1.mp4",
+      "label": "An ủi",
+      "bad_percent": 66.66666666666666,
+      "bad_frames": 20,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Color": 20
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Băn khoăn\\103402.mp4",
+      "label": "Băn khoăn",
+      "bad_percent": 66.66666666666666,
+      "bad_frames": 20,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Yellow": 20
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Băn khoăn\\103402_1.mp4",
+      "label": "Băn khoăn",
+      "bad_percent": 66.66666666666666,
+      "bad_frames": 20,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Yellow": 20
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Băn khoăn\\103402_2.mp4",
+      "label": "Băn khoăn",
+      "bad_percent": 66.66666666666666,
+      "bad_frames": 20,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Yellow": 20
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Băn khoăn\\103402_3.mp4",
+      "label": "Băn khoăn",
+      "bad_percent": 66.66666666666666,
+      "bad_frames": 20,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Yellow": 20
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Bộ y tế\\523389.mp4",
+      "label": "Bộ y tế",
+      "bad_percent": 66.66666666666666,
+      "bad_frames": 20,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Color": 10,
+        "Solid Red": 10
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Chân\\984642.mp4",
+      "label": "Chân",
+      "bad_percent": 66.66666666666666,
+      "bad_frames": 20,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Color": 10,
+        "Solid Blue": 10
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Khai báo\\362529.mp4",
+      "label": "Khai báo",
+      "bad_percent": 66.66666666666666,
+      "bad_frames": 20,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Red": 20
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Nhà\\141337.mp4",
+      "label": "Nhà",
+      "bad_percent": 66.66666666666666,
+      "bad_frames": 20,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Green": 10,
+        "Solid Color": 10
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Phạt\\325468.mp4",
+      "label": "Phạt",
+      "bad_percent": 66.66666666666666,
+      "bad_frames": 20,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Red": 20
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Xin lỗi\\455505.mp4",
+      "label": "Xin lỗi",
+      "bad_percent": 66.66666666666666,
+      "bad_frames": 20,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Red": 10,
+        "Solid Color": 10
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Áp dụng\\391704.mp4",
+      "label": "Áp dụng",
+      "bad_percent": 66.66666666666666,
+      "bad_frames": 20,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Green": 10,
+        "Solid Color": 10
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Áp dụng\\678856.mp4",
+      "label": "Áp dụng",
+      "bad_percent": 66.66666666666666,
+      "bad_frames": 20,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Color": 20
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Ban ngày\\855731.mp4",
+      "label": "Ban ngày",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Green": 10,
+        "Solid White": 9
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Ban ngày\\855731_1.mp4",
+      "label": "Ban ngày",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Green": 10,
+        "Solid White": 9
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Ban ngày\\855731_2.mp4",
+      "label": "Ban ngày",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Green": 10,
+        "Solid White": 9
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Biết\\520521.mp4",
+      "label": "Biết",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid White": 19
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Biết\\585100.mp4",
+      "label": "Biết",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Color": 19
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Biết\\863587.mp4",
+      "label": "Biết",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Color": 19
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Chiều\\578634.mp4",
+      "label": "Chiều",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Black": 19
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Chiều\\578634_1.mp4",
+      "label": "Chiều",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Black": 19
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Chiều\\578634_2.mp4",
+      "label": "Chiều",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Black": 19
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Con gấu\\128276.mp4",
+      "label": "Con gấu",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Blue": 10,
+        "Solid Color": 9
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Con gấu\\936912.mp4",
+      "label": "Con gấu",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Color": 11,
+        "Solid Yellow": 8
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Cá\\417212.mp4",
+      "label": "Cá",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid White": 10,
+        "Solid Yellow": 9
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Cám dỗ\\208618.mp4",
+      "label": "Cám dỗ",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Blue": 19
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Cảm ơn\\255287.mp4",
+      "label": "Cảm ơn",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Green": 19
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Cứu\\121369.mp4",
+      "label": "Cứu",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Green": 10,
+        "Solid Color": 9
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Dạy dỗ\\307963.mp4",
+      "label": "Dạy dỗ",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Black": 19
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Dạy dỗ\\354646.mp4",
+      "label": "Dạy dỗ",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Color": 19
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Dạy dỗ\\720859.mp4",
+      "label": "Dạy dỗ",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Red": 19
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Dễ\\971084.mp4",
+      "label": "Dễ",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Color": 10,
+        "Solid Yellow": 9
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Giúp\\118080.mp4",
+      "label": "Giúp",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid White": 19
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Giúp\\351997.mp4",
+      "label": "Giúp",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Color": 19
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Giúp\\351997_1.mp4",
+      "label": "Giúp",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Color": 19
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Giúp\\351997_2.mp4",
+      "label": "Giúp",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Color": 19
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Giúp\\351997_3.mp4",
+      "label": "Giúp",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Color": 19
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Giúp\\421080.mp4",
+      "label": "Giúp",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Blue": 19
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Giúp\\641722.mp4",
+      "label": "Giúp",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Red": 19
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Hâm mộ\\396745.mp4",
+      "label": "Hâm mộ",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Color": 19
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Hâm mộ\\486945.mp4",
+      "label": "Hâm mộ",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid White": 19
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Hôm nay\\701949.mp4",
+      "label": "Hôm nay",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Color": 19
+      }
+    },
+    {
+      "path": "dataset\\dataset\\train\\Hôm nay\\701949_1.mp4",
+      "label": "Hôm nay",
+      "bad_percent": 63.33333333333333,
+      "bad_frames": 19,
+      "total_frames": 30,
+      "glitch_types": {
+        "Solid Color": 19
+      }
+    }
+  ]
+}
