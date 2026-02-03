@@ -135,7 +135,7 @@ async def predict_topk(
     try:
         video_bytes = await file.read()
         results = model_manager.predict(video_bytes, top_k=k)
-        
+        print([PredictionResult(**r) for r in results])
         return TopKPredictionResponse(
             success=True,
             predictions=[PredictionResult(**r) for r in results]

@@ -1,0 +1,13 @@
+{
+  "total_videos": 3100,
+  "min_frames": 16,
+  "max_frames": 30,
+  "mean_frames": 29.893870967741936,
+  "median_frames": 30.0,
+  "std_frames": 1.1648180736239455,
+  "quartiles": {
+    "q1": 30.0,
+    "q2": 30.0,
+    "q3": 30.0
+  }
+}

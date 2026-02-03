@@ -151,3 +151,5 @@ test_something/
 dataset
 models/*
 output
+venv3.8source
+*/debug_videos/*

@@ -9,6 +9,7 @@ opencv-python>=4.8.0
 
 # Scientific Computing
 numpy>=1.24.0
+matplotlib>=3.7.0
 
 # Web API
 fastapi>=0.104.0

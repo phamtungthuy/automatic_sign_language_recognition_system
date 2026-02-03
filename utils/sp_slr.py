@@ -5,7 +5,7 @@ import os
 import math
 import pickle
 import tempfile
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 
 import cv2
 import numpy as np
@@ -13,6 +13,13 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torchvision import models
+
+try:
+    import mediapipe as mp
+    MEDIAPIPE_AVAILABLE = True
+except ImportError:
+    MEDIAPIPE_AVAILABLE = False
+    print("⚠️ MediaPipe not installed. Person detection disabled. Install with: pip install mediapipe")
 
 from utils.constants import (
     SLR_MODEL_PATH,
@@ -25,6 +32,10 @@ from utils.constants import (
 MEAN = [0.485, 0.456, 0.406]
 STD = [0.229, 0.224, 0.225]
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+
+# Person detection settings
+PERSON_DETECTION_ENABLED = True  # Set to False to disable
+CROP_PADDING = 0.15  # 15% padding around detected person
 
 
 # ============== MODEL ARCHITECTURE ==============
@@ -131,17 +142,136 @@ class ConvNeXtTransformer(nn.Module):
         return x
 
 
+# ============== PERSON DETECTION (MediaPipe) ==============
+class PersonDetector:
+    """
+    Detect person in frame using MediaPipe Holistic
+    Returns bounding box around detected person/hands
+    """
+    _instance = None
+    
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+            cls._instance._initialized = False
+        return cls._instance
+    
+    def __init__(self):
+        if self._initialized:
+            return
+        
+        self.holistic = None
+        if MEDIAPIPE_AVAILABLE and PERSON_DETECTION_ENABLED:
+            self.holistic = mp.solutions.holistic.Holistic(
+                static_image_mode=False,
+                model_complexity=0,  # 0=lite, 1=full, 2=heavy
+                min_detection_confidence=0.5,
+                min_tracking_confidence=0.5
+            )
+            print("✅ MediaPipe Holistic initialized for person detection")
+        
+        self._initialized = True
+    
+    def get_person_bbox(self, frame: np.ndarray) -> Optional[Tuple[int, int, int, int]]:
+        """
+        Detect person and return bounding box (x1, y1, x2, y2)
+        Returns None if no person detected
+        """
+        if self.holistic is None:
+            return None
+        
+        h, w = frame.shape[:2]
+        
+        # Convert BGR to RGB for MediaPipe
+        rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB) if frame.shape[2] == 3 else frame
+        
+        results = self.holistic.process(rgb_frame)
+        
+        # Collect all landmark points
+        points = []
+        
+        # Pose landmarks (body)
+        if results.pose_landmarks:
+            for lm in results.pose_landmarks.landmark:
+                if lm.visibility > 0.5:
+                    points.append((int(lm.x * w), int(lm.y * h)))
+        
+        # Left hand
+        if results.left_hand_landmarks:
+            for lm in results.left_hand_landmarks.landmark:
+                points.append((int(lm.x * w), int(lm.y * h)))
+        
+        # Right hand  
+        if results.right_hand_landmarks:
+            for lm in results.right_hand_landmarks.landmark:
+                points.append((int(lm.x * w), int(lm.y * h)))
+        
+        if not points:
+            return None
+        
+        # Calculate bounding box
+        xs = [p[0] for p in points]
+        ys = [p[1] for p in points]
+        
+        x1, x2 = min(xs), max(xs)
+        y1, y2 = min(ys), max(ys)
+        
+        # Add padding
+        pad_x = int((x2 - x1) * CROP_PADDING)
+        pad_y = int((y2 - y1) * CROP_PADDING)
+        
+        x1 = max(0, x1 - pad_x)
+        y1 = max(0, y1 - pad_y)
+        x2 = min(w, x2 + pad_x)
+        y2 = min(h, y2 + pad_y)
+        
+        return (x1, y1, x2, y2)
+    
+    def crop_person(self, frame: np.ndarray) -> np.ndarray:
+        """
+        Crop frame to person bounding box
+        Returns original frame if no person detected
+        """
+        bbox = self.get_person_bbox(frame)
+        
+        if bbox is None:
+            return frame
+        
+        x1, y1, x2, y2 = bbox
+        
+        # Ensure valid crop
+        if x2 - x1 < 50 or y2 - y1 < 50:
+            return frame
+        
+        return frame[y1:y2, x1:x2]
+
+
+# Global instance
+person_detector = PersonDetector()
+
+
 # ============== PREPROCESSING ==============
-def read_video_from_path(video_path: str) -> torch.Tensor:
-    """Read video frames from file path"""
+def read_video_from_path(video_path: str, crop_person: bool = True) -> torch.Tensor:
+    """
+    Read video frames from file path
+    If crop_person=True and MediaPipe available, crop to detected person
+    """
     cap = cv2.VideoCapture(video_path)
     frames = []
+    
     while True:
         ret, frame = cap.read()
         if not ret:
             break
+        
+        # Crop to person if enabled (frame is BGR here)
+        if crop_person and PERSON_DETECTION_ENABLED and person_detector.holistic is not None:
+            frame = person_detector.crop_person(frame)
+        
+        # Convert BGR to RGB
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         frames.append(frame)
+    
     cap.release()
     
     if len(frames) == 0:

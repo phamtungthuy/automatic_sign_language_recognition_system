@@ -1,0 +1,13 @@
+/* Custom CSS cho Sign Language Recognition UI */
+
+.prediction-box {
+    font-size: 24px !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    padding: 20px !important;
+}
+
+.sequence-box {
+    font-size: 18px !important;
+    color: #2196f3 !important;
+}

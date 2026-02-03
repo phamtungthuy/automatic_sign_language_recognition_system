@@ -13,6 +13,12 @@ CONFIG_PATH = ROOT_PATH / "configs"
 TOOL_SCHEMA_PATH = ROOT_PATH / "tools/schema"
 DEFAULT_WORKSPACE_ROOT = ROOT_PATH / "workspace"
 
+UI_PATH = ROOT_PATH / "ui"
+STATIC_DIR = UI_PATH / "static"
+CONTENT_DIR = STATIC_DIR / "content"
+STYLESHEET_PATH = STATIC_DIR / "styles.css"
+
+
 SERDESER_PATH = (
     ROOT_PATH / "storage"
 )  # TODO to store `storage` under the individual generated project
@@ -125,6 +131,7 @@ EMBEDDING_API_TYPE = config["embedding"]["api_type"]
 
 # Reporter
 REPORTER_DEFAULT_URL = config.get("REPORTER_URL", "")
+
 
 
 PROXY = None
